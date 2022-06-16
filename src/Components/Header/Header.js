@@ -15,7 +15,7 @@ const Header = () =>{
 
                 
             </nav>
-            <ShoppingCartIcon sx={{ color: cyan[500] }} />
+            <ShoppingCartIcon sx={{ color: cyan[50] }} />
         </header>
 
     )
