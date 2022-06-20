@@ -1,12 +1,12 @@
 import logo from "../../assest/logo.jpg"
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { cyan } from '@mui/material/colors';
-import "../Header.css"
+import "./Header.css"
 
 const Header = () =>{
     return(
         <header className="header">
-            <img src={logo} alt=""/>
+            <img className="img-logo" src={logo} alt=""/>
             
             <nav>
                 <a href="">NOSOTROS</a>
