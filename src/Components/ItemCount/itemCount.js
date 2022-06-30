@@ -36,7 +36,6 @@ import 'bootstrap/dist/css/bootstrap.css';
            <button onClick={()=>console.log(Card)}>Agregar al Carrito</button>
         </div>
         
-        
     </section>
   )
 }

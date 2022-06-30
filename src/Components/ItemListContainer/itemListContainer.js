@@ -1,12 +1,27 @@
+import { useEffect, useState } from "react"
+import ItemList from "../ItemList/ItemList"
+import { getData } from "../../mocks/fakeApi"
 
-import "./itemListContainer.css"
+const ItemListContainer = ({ saludo }) => {
+  const [productList, setProductList]=useState([])
+  const [loading, setLoading]=useState(true)
+  
 
-const itemListContainer = ({ saludo }) => {
+    useEffect(()=> {
+      getData
+      .then((result)=>setProductList(result))
+      .catch((error)=> console.log(error))
+      .finally(()=> setLoading(false) )
+    }, [])
+
+    console.log(productList)
     return( 
         <div>
-          {saludo}
+         <h1>{saludo}</h1> 
+         {loading ? <p>Cargando...</p> :  <ItemList productList={productList}/> }
+      
       </div>
 
     )
 }
-export default itemListContainer
+export default ItemListContainer
