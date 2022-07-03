@@ -5,6 +5,7 @@ import fideos from '../assest/fideos.jpg'
 import caseritos from '../assest/caseritos.jpg'
 import canelones from '../assest/canelones.jpg'
 import lasagna from '../assest/lasagna.jpg'
+import promo from '../assest/promo1.jpg'
 
 const productos = [
     {id:'01', name:'ravioles', price:200, img: ravioles , stock:100},
@@ -16,6 +17,14 @@ const productos = [
     {id:'07', name:'lasagna', price:200, img:lasagna, stock:100}
   ]
 
+  const destacado = {
+    id: 1,
+    name: 'Promo',
+    price: 500,
+    stock: 100,
+    image: promo
+  }
+
   export const getData =new Promise ((resolve, reject)=> {
     let condicion = true
       setTimeout(()=>{
@@ -26,3 +35,11 @@ const productos = [
         }
       },2000)
   })
+
+  export const getProd = () => {
+      return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve(destacado);
+          },2000);
+      });
+  };
