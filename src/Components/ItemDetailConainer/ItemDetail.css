@@ -1,0 +1,10 @@
+.imgDestacado {
+    display: flex;
+    margin: auto;
+    height: 500px;
+}
+
+.gif {
+    width:100px;
+    margin-left: 45%;
+}

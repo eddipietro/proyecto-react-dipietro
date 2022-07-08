@@ -1,3 +1,5 @@
+/*
+
 header{
     display: flex;
     justify-content: space-evenly;
@@ -10,18 +12,135 @@ h1 {
     color: aliceblue;
 }
 
-.img-logo {
-    width: 5%;
-    border-radius: 50%;
-    padding: 1%;
-    
-}
+
 
 a{
     color: aliceblue;
     padding: 10px;
 }
 
+
+
+*/
+.img-logo {
+    width: 12%;
+    border-radius: 50%;
+    padding: 1%;
+    
+    
+}
+
+
 ShoppingCartIcon {
     color: #fff;
 }
+
+body {
+    background-color: #384047;
+  }
+  
+  .wrapper {
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #343436;
+  }
+  
+  nav {
+    display: flex;
+    width: 90%;
+  }
+  
+  ul li a {
+    margin-left: 1.5em;
+  }
+  
+  a.logo {
+    margin-right: auto;
+  }
+  
+  ul {
+    display: flex;
+    list-style: none;
+   
+  }
+  
+.categorias{
+  display: flex;
+    align-items: center;
+    justify-content: center;
+  margin-right: 5%;
+  color: #fff;
+  text-decoration: none;
+  
+}
+  .secciones {
+    text-decoration: none;
+    color: aliceblue;
+    position: relative;
+    font-size: 1.25em;
+  }
+  
+  .secciones:hover::after {
+    transition: all 0.35s;
+    color: #fff;
+  }
+  
+  a::after {
+    right: 50%;
+    left: 50%;
+  }
+  
+  a:hover::after {
+    right: 0;
+    left: 0;
+  }
+  
+  @media (max-width: 1024px) {
+    .wrapper {
+      height: auto;
+    }
+  
+    nav {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    a.logo {
+      margin-top: 1.5em;
+      margin-bottom: 1.5em;
+      margin-right: 0px;
+    }
+  
+    ul {
+      width: 100%;
+      margin-bottom: 5em;
+      justify-content: space-between;
+    }
+  
+    ul li a {
+      margin-left: 0px;
+    }
+  }
+  @media (max-width: 768px) {
+    .img-logo {
+        width: 18%;
+        border-radius: 50%;
+        padding: 1%;
+        
+    }
+  
+    ul {
+      flex-direction: column;
+    }
+  
+    ul li {
+      margin: 0.3em;
+      text-align: center;
+    }
+  
+    ul li a {
+      margin-left: 0px;
+    }
+  }

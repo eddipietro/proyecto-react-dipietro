@@ -1,20 +1,26 @@
 import React from 'react'
-import Item from '../Item/Item'
-import ItemDetailContainer from './ItemDetailContainer'
-import ItemCount from '../ItemCount/itemCount'
+import { Link } from 'react-router-dom'
+import './ItemDetail.css'
+import { getData } from "../../mocks/fakeApi"
 
-function ItemDetail({ destacado }) {
+
+
+function ItemDetail({ productos }) {
+ 
+   // console.log(productos)
     // const {productList}=props
     return (
         <div>
             <h3>Producto Destacado</h3>
-            <img src={destacado.image} alt={destacado.name}  widht="400" /> 
+            <img className='imgDestacado' src={productos.img} alt={productos.name}   /> 
                 <div>
-                    <h1>{destacado.name}</h1>
-                    <h2>{destacado.price}</h2>
-                    <h3>{destacado.stock}</h3>
+                    <h1>{productos.name}</h1>
+                    <h2>{productos.price}</h2>
+                    <h3>{productos.stock}</h3>
+                    <h3>{productos.descripcion}</h3>
                     
-
+          <Link to={`/detail/${productos.id}`} className='btn btn-primary btnVerMas'>Ver más</Link>
+          
                 </div>
         </div>
     )

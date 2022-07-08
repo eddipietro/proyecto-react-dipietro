@@ -1,28 +1,27 @@
 import Header from './Components/Header/Header'
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer'
 import ItemCount from './Components/ItemCount/itemCount'
-import { BrowserRouter } from 'react-router-dom'
-
-//aca falta importar lo de browser router
-import {
-   //BrowserRouter,
-   Router,
-   Route,
-} from "react-router-dom"
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import ItemDetailContainer from './Components/ItemDetailConainer/ItemDetailContainer'
+import Cart from './Components/Cart/Cart'
 
 const App = () =>{
   return (
-    //aca falta importar lo de brouser router <BrouserRouter></>
-    
-    < BrowserRouter>
-       < Header /> 
-       < ItemCount stock={5} name={'Canelones'}/>
-       < ItemListContainer saludo="Bienvenidos a mi Ecommerce"/>
-       < ItemDetailContainer />
+    < BrowserRouter>    
+        < Header /> 
+       <Routes>
+        <Route path='/' element={  < ItemListContainer saludo="Bienvenidos a mi Ecommerce"/>  } />
+        <Route path='/category/:categoryId' element={  < ItemListContainer />  } />
+        <Route path='/detail/:id' element={  < ItemDetailContainer />  } /> 
+        <Route path='/cart' element={  < Cart/>  } />
+
+       </Routes>
     </BrowserRouter>
     
   )
 }
 
-export default App
+    export default App
+
+
+

@@ -1,3 +1,33 @@
-.disponibilidad {
-    padding: 5%;
+.imgCard {
+   
+    height: 600;
 }
+.disponibilidad {
+    display: flex;
+    margin: 50;
+}
+
+.botoncito {
+    padding: 500;
+}
+
+.boxDetalle{
+
+   width: 25%;
+   display: flex;
+   float: left;
+   margin-top: 1%;
+   margin-left: 7%;
+  
+   
+}
+.boxDetalle2 {
+    width: 60%;
+    height: 700px;
+    display: flex;
+    float: left;
+    margin: 1%;
+}
+
+/**/
+
