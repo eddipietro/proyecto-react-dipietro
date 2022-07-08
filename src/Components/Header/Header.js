@@ -9,12 +9,12 @@ const Header = () =>{
 
   const categories = [
     { name: "Home", id: 0, route: "/"},
-    { name: "Ravioles", id: 1, route: "/category/ravioles" },
-    { name: "Sorrentinos", id: 2, route: "/category/sorrentinos" },
-    { name: "Ñoquis", id: 3, route: "/category/ñoquis" },
-    { name: "Fideos", id: 4, route: "/category/fideos" },
-    { name: "Canelones", id: 5, route: "/category/canelones" },
-    { name: "Salsas", id: 6, route: "/category/salsas" },
+    { name: "ravioles", id: 1, route: "/category/ravioles" },
+    { name: "sorrentinos", id: 2, route: "/category/sorrentinos" },
+    { name: "ñoquis", id: 3, route: "/category/ñoquis" },
+    { name: "fideos", id: 4, route: "/category/fideos" },
+    { name: "canelones", id: 5, route: "/category/canelones" },
+    { name: "salsas", id: 6, route: "/category/salsas" },
 ];
     return(
         <header className="wrapper">

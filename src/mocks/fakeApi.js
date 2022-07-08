@@ -9,13 +9,15 @@ import promo from '../assest/promo1.jpg'
 import salsas from '../assest/salsas.jpg'
 
 
-const productos = [
-    {id:1, name:'ravioles', price:200, img: ravioles , stock:100,  category: ravioles },
-    {id:2, name:'sorrentinos', price:200, img:sorrentinos, stock:100,  category: sorrentinos},
-    {id:3, name:'ñoquis', price:200, img:ñoquis, stock:100,  category:  ñoquis},
-    {id:4, name:'fideos', price:200, img:fideos, stock:100,  category:  fideos},
-    {id:5, name:'canelones', price:200, img:canelones, stock:100,  category: canelones},
-    {id:6, name:'salsas', price:200, img:salsas, stock:100, category: salsas }
+
+
+  const productos = [
+    {id:1, name:'ravioles', price:200, img: ravioles , stock:100,  category: 'ravioles' },
+    {id:2, name:'sorrentinos', price:200, img:sorrentinos, stock:100,  category: 'sorrentinos'},
+    {id:3, name:'ñoquis', price:200, img:ñoquis, stock:100,  category:  'ñoquis'},
+    {id:4, name:'fideos', price:200, img:fideos, stock:100,  category:  'fideos'},
+    {id:5, name:'canelones', price:200, img:canelones, stock:100,  category: 'canelones'},
+    {id:6, name:'salsas', price:200, img:salsas, stock:100, category: 'salsas' }
   ]
 
 // video after minuto 40 realiza esta promesa
