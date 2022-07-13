@@ -8,12 +8,21 @@ import ItemCount from '../ItemCount/itemCount'
 
 
 
-function ItemDetail({ productos }) {
+function ItemDetail({ productos })  {
+
+    const [bytFinalized, setFinalized] = useState(false)
+    const { addCartProducto } = useContext (cartContext)
+
     const [amount, setAmount] = useState(1);
     const [visibleCounter, setVisibleCounter] = useState(true);
- const onAdd = (qty) => {
-    setVisibleCounter(false);
 
+
+ const onAdd = (qty) => {
+    addCartProducto({...productos, qty: qty});
+    //setBuyFinalized(true);
+    setVisibleCounter(false);
+// crear un ob // const productoCart= {...productos, aty: count}
+//agregarUsuario(productoCart)
 }
 
 const modifyAmount = (value) => {

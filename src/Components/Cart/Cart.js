@@ -1,10 +1,15 @@
-import React from 'react'
-import ItemCount from '../ItemCount/itemCount'
+
+import React, { useContext } from 'react'
+import { cartContext } from '../../context/CartContext';
 
 const Cart = () => {
+  
+  const { qtyProductos } = useContext(cartContext);
+
   return (
     <div>
-      <h1>Este es el Carrito</h1>
+      <h1>Este es el Carrito + {qtyProductos}</h1>
+
       </div>
   )
 }

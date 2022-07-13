@@ -5,52 +5,53 @@ const { Provider } = cartContext;
 
 const CartCustomProvider = ({ children }) => {
   // Productos del Carrito y Modif Productos del Carrito
-  const [productsCart, setProductsCart] = useState([]);
-  const [qtyProducts, setQtyProducts] = useState(0);
+  const [productosCart, setProductosCart] = useState([]);
+  const [qtyProductos, setQtyProductos] = useState(0);
 
   useEffect(() => {
-    getQtyCarProducts();
-  }, [productsCart]);
+    getQtyCarProductos();
+  }, [productosCart]);
 
-  const addCartProduct = (product) => {
-    if (isInCart(product.id)) {
-      const found = productsCart.find((producto) => producto.id === product.id);
-      const index = productsCart.indexOf(found);
-      const aux = [...productsCart];
-      aux[index].cantidad += product.cantidad;
-      setProductsCart(aux);
+  const addCartProducto = (producto) => {
+    if (isInCart(producto.id)) {
+      const found = productosCart.find((p) => p.id === producto.id);
+      const index = productosCart.indexOf(found);
+      const aux = [...productosCart];
+      aux[index].qty += producto.qty;
+      setProductosCart(aux);
     } else {
-      setProductsCart([...productsCart, product]);
+      setProductosCart([...productosCart, producto]); //setProductosCart nose si va 
     }
   };
 
-  const deleteCartProduct = (id) => {
-    productsCart.filter((productCart) => productCart.id !== id);
+  const deleteCartProducto = (id) => {
+    productosCart.filter((productoCart) => productoCart.id !== id);
   };
 
   const isInCart = (id) => {
-    return productsCart.some((productCar) => productCar.id === id);
+    return productosCart.some((productoCar) => productoCar.id === id);
   };
 
-  const getQtyCarProducts = () => {
+  const getQtyCarProductos = () => {
     let qty = 0;
-    productsCart.forEach((productCart) => (qty += productCart.cantidad));
-    setQtyProducts(qty);
+    productosCart.forEach((productoCart) => (qty += productoCart.qty));
+    setQtyProductos(qty);
   };
 
   const clearCart = () => {
-    setProductsCart([]);
-    setQtyProducts(0);
+    setProductosCart([]);
+    setQtyProductos(0);
   };
 
   return (
     <Provider
       value={{
-        productsCart,
-        addCartProduct,
-        deleteCartProduct,
+        productosCart,
+        addCartProducto,
+        getQtyCarProductos,
+        deleteCartProducto,
         clearCart,
-        qtyProducts,
+        qtyProductos,
       }}
     >
       {children};

@@ -24,7 +24,7 @@ const Header = () =>{
             <nav>
                 {categories.map((category) => <NavLink to={category.route} key={category.id} className="categorias" >{category.name}</NavLink>)}
               </nav>
-              <Link to="/cart/:id"> <ShoppingCartIcon sx={{ color: cyan[50] }} /></Link>
+              <Link to="/cart"> <ShoppingCartIcon sx={{ color: cyan[50] }} /></Link>
         </header>
     )
 }
