@@ -1,14 +1,7 @@
 import React, { useState } from 'react'
-import canelones from "../../assest/canelones.jpg"
-import ravioles from "../../assest/ravioles.jpg"
-import fideos from "../../assest/fideos.jpg"
-import ñoquis from "../../assest/ñoquis.jpg"
-import sorrentinos from "../../assest/sorrentinos.jpg"
-import tartas from "../../assest/tartas.jpg"
 import "./itemCount.css"
-import canelones2 from '../../assest/canelones2.jpg'
 import 'bootstrap/dist/css/bootstrap.css';
-import { Link } from 'react-router-dom'
+
 
 
 
@@ -42,7 +35,7 @@ import { Link } from 'react-router-dom'
            <button className='btn btn-danger btn-contador boton' onClick={()=>count(+1)}> + </button>
            </div>
            <div className=' d-flex justify-content-center '> Stock Disponible</div>
-           <button className='add-btn botoncito' onClick={() => onAdd(amount)}>Agregar al Carrito</button>
+           <button className='add-btn botoncito' onClick={() => onAdd(Card)}>Agregar al Carrito</button>
 
 
 

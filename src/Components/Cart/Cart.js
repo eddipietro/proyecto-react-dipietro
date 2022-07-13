@@ -8,7 +8,7 @@ const Cart = () => {
 
   return (
     <div>
-      <h1>Este es el Carrito + {qtyProductos}</h1>
+      <h1>Este es el Carrito y su cantidad de productos agregados son:   {qtyProductos}</h1>
 
       </div>
   )

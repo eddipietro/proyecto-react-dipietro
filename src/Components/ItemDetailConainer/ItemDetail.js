@@ -18,6 +18,7 @@ function ItemDetail({ productos })  {
 
 
  const onAdd = (qty) => {
+    
     addCartProducto({...productos, qty: qty});
     //setBuyFinalized(true);
     setVisibleCounter(false);

@@ -1,7 +1,10 @@
 import React, { createContext, useState, useEffect } from "react";
-
 export const cartContext = createContext();
 const { Provider } = cartContext;
+
+// IMPOTANTEEE   --- ME FALTA REALIZAR LA CONSIGNA
+// DEL DESAFIO QUE ES QUE LOS PRODUCTOS 
+// NO SE DUPLIQUEN A LA HORA DE SUMARSE EN EL CARRITO.
 
 const CartCustomProvider = ({ children }) => {
   // Productos del Carrito y Modif Productos del Carrito
